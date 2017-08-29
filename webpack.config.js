@@ -11,6 +11,13 @@ module.exports = {
         filename: 'bundle.js',
     },
 
+    devServer: {
+        contentBase: path.resolve(__dirname, './dist'),
+        compress: true,
+        hot: true,
+        open: true,
+    },
+
     module: {
         rules: [
             {
