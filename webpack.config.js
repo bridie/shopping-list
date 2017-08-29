@@ -15,6 +15,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Shopping list',
             template: 'index.ejs',
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            }
         })
     ],
 }
