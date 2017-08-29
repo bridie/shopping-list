@@ -11,6 +11,19 @@ module.exports = {
         filename: 'bundle.js',
     },
 
+    module: {
+        rules: [
+            {
+              test: /\.js$/,
+              exclude: [/node_modules/],
+              use: [{
+                loader: 'babel-loader',
+                options: { presets: ['react', 'es2015', 'stage-3'] },
+              }],
+            },
+        ],
+    },
+
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Shopping list',
