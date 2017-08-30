@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     context: path.resolve(__dirname, './src'),
@@ -39,6 +40,9 @@ module.exports = {
                 collapseWhitespace: true,
                 removeComments: true
             }
-        })
+        }),
+        new CopyWebpackPlugin([
+            { from: 'favicons' }
+        ])
     ],
 }
