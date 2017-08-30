@@ -42,7 +42,10 @@ module.exports = {
             }
         }),
         new CopyWebpackPlugin([
-            { from: 'favicons' }
+            {
+                from: 'favicons',
+                to: 'favicons'
+            },
         ])
     ],
 }
