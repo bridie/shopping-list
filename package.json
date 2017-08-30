@@ -1,4 +1,9 @@
 {
+  "name": "shopping-list",
+  "description": "A progressive web application for creating a shared shopping list",
+  "scripts": {
+    "start": "webpack-dev-server --hot"
+  },
   "dependencies": {
     "html-webpack-plugin": "^2.30.1",
     "react": "^15.6.1",
