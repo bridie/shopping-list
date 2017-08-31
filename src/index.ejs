@@ -15,6 +15,14 @@
     <meta name="apple-mobile-web-app-title" content="Shopping List">
     <meta name="msapplication-starturl" content="/">
     <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <script>
+      if ('serviceWorker' in navigator) { 
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
   </head>
   <body>
     <div class="root"></div>

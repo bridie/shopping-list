@@ -46,6 +46,11 @@ module.exports = {
                 from: 'favicons',
                 to: 'favicons'
             },
-        ])
+        ]),
+        new CopyWebpackPlugin([
+            {
+                from: 'sw.js',
+            },
+        ]),
     ],
 }
